@@ -97,11 +97,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bin\Debug\darknet_model\yolov3.cfg" />
-    <None Include="bin\Debug\darknet_model\yolov3.weights" />
-    <None Include="bin\Debug\darknet_model\yolov4-custom.cfg" />
-    <None Include="bin\Debug\darknet_model\yolov4-custom_best.weights" />
-    <None Include="bin\Debug\Yolov4Test.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,19 +112,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\darknet_model\yolov3.txt" />
-    <Content Include="bin\Debug\darknet_model\yolov4.txt" />
     <Content Include="bin\Debug\dll\x64\OpenCvSharpExtern.dll" />
     <Content Include="bin\Debug\dll\x64\opencv_videoio_ffmpeg453_64.dll" />
     <Content Include="bin\Debug\dll\x86\OpenCvSharpExtern.dll" />
     <Content Include="bin\Debug\dll\x86\opencv_videoio_ffmpeg453.dll" />
-    <Content Include="bin\Debug\fuck.jpg" />
-    <Content Include="bin\Debug\SelfTest1.PNG" />
-    <Content Include="bin\Debug\SelfTest2.PNG" />
-    <Content Include="bin\Debug\test2.jpg" />
-    <Content Include="bin\Debug\test3.jpg" />
-    <Content Include="bin\Debug\Yolov4Test.exe" />
-    <Content Include="bin\Debug\Yolov4Test.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
