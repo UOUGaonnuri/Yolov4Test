@@ -119,6 +119,10 @@
   <ItemGroup>
     <Content Include="bin\Debug\darknet_model\yolov3.txt" />
     <Content Include="bin\Debug\darknet_model\yolov4.txt" />
+    <Content Include="bin\Debug\dll\x64\OpenCvSharpExtern.dll" />
+    <Content Include="bin\Debug\dll\x64\opencv_videoio_ffmpeg453_64.dll" />
+    <Content Include="bin\Debug\dll\x86\OpenCvSharpExtern.dll" />
+    <Content Include="bin\Debug\dll\x86\opencv_videoio_ffmpeg453.dll" />
     <Content Include="bin\Debug\fuck.jpg" />
     <Content Include="bin\Debug\SelfTest1.PNG" />
     <Content Include="bin\Debug\SelfTest2.PNG" />
