@@ -37,7 +37,7 @@ namespace Yolov4Test
             // 
             this.pictureBox1.Location = new System.Drawing.Point(32, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(495, 518);
+            this.pictureBox1.Size = new System.Drawing.Size(1484, 858);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -45,7 +45,7 @@ namespace Yolov4Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 609);
+            this.ClientSize = new System.Drawing.Size(1537, 901);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";

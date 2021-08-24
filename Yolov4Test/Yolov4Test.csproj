@@ -118,6 +118,8 @@
     <Content Include="bin\Debug\dll\x64\opencv_videoio_ffmpeg453_64.dll" />
     <Content Include="bin\Debug\dll\x86\OpenCvSharpExtern.dll" />
     <Content Include="bin\Debug\dll\x86\opencv_videoio_ffmpeg453.dll" />
+    <Content Include="bin\Debug\test.jpg" />
+    <Content Include="bin\Debug\test3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

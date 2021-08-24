@@ -27,7 +27,7 @@ namespace Yolov4Test
             List<float> scores = new List<float>();
             List<Rect> bboxes = new List<Rect>();
 
-            Mat image = new Mat("fuck.jpg");
+            Mat image = new Mat("test.jpg");
             Net net = Net.ReadNetFromDarknet(cfgFile, darknetModel);
             Mat inputBlob = CvDnn.BlobFromImage(image, 1 / 255f, new OpenCvSharp.Size(416, 416), crop: false);
 
@@ -55,6 +55,7 @@ namespace Yolov4Test
                             float width = prob.At<float>(p, 2) * image.Width;
                             float height = prob.At<float>(p, 3) * image.Height;
 
+
                             labels.Add(classNames[classes]);
                             scores.Add(probability);
                             bboxes.Add(new Rect((int)centerX - (int)width / 2, (int)centerY - (int)height / 2, (int)width, (int)height));
@@ -67,24 +68,26 @@ namespace Yolov4Test
 
             foreach (int i in indices)
             {
+                float Rate = float.Parse(scores[i].ToString()) * 100;
+                string label = label = labels[i] + ":" + string.Format("{0:F2}", Rate) + "%";
                 if (labels[i] == "Mask")
                 {
                     Cv2.Rectangle(image, bboxes[i], Scalar.GreenYellow, 2);
-                    Cv2.PutText(image, labels[i], bboxes[i].Location, HersheyFonts.HersheyComplex, 1.0, Scalar.GreenYellow);
+                    Cv2.PutText(image, label, bboxes[i].Location, HersheyFonts.HersheyComplex, 1.0, Scalar.GreenYellow);
                 }
                 else
                 {
                     Cv2.Rectangle(image, bboxes[i], Scalar.Red, 2);
-                    Cv2.PutText(image, labels[i], bboxes[i].Location, HersheyFonts.HersheyComplex, 1.0, Scalar.Red);
+                    Cv2.PutText(image, label, bboxes[i].Location, HersheyFonts.HersheyComplex, 1.0, Scalar.Red);
                 }
             }
             Mat result = new Mat();
             Cv2.Resize(image, result, new OpenCvSharp.Size(pictureBox1.Width, pictureBox1.Height));
-            Bitmap bitmap = BitmapConverter.ToBitmap(result);
-            pictureBox1.Image = bitmap;
-            //Cv2.ImShow("image", image);
-            //Cv2.WaitKey();
-            //Cv2.DestroyAllWindows();
+            //Bitmap bitmap = BitmapConverter.ToBitmap(result);
+            //pictureBox1.Image = bitmap;
+            Cv2.ImShow("image", image);
+            Cv2.WaitKey();
+            Cv2.DestroyAllWindows();
         }
     }
 }
